@@ -6,6 +6,9 @@ import(
 )	
 // Capitalize the first letter of all variables! 
 type Config_guard struct {
+	Serv struct{
+		Addr string `yaml:"addr"`
+	}
 	Dbconf struct {
 		Debug bool `yaml:"debug"`
 		Db_type string `yaml:"db_type"`
@@ -18,7 +21,7 @@ type Config_guard struct {
 		Path string `yaml:"path"`
 	}
 }
-var Data Config_guard
+var Origin_Conf Config_guard
 
 
 func Parse_config(path string) error {
@@ -26,7 +29,7 @@ func Parse_config(path string) error {
 	if err != nil {
 		return err
 	}
-	err2 := yaml.Unmarshal(conf, &Data)
+	err2 := yaml.Unmarshal(conf, &Origin_Conf)
 	if err2!=nil{
 		return err2
 	}

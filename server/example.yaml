@@ -1,3 +1,5 @@
+serv:
+  addr : 0.0.0.0:8099
 dbconf:
   debug : true
   max_lifetime : 7200
