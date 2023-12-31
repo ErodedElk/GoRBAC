@@ -1,0 +1,8 @@
+dbconf:
+  debug : true
+  max_lifetime : 7200
+  max_open_conns : 150
+  max_idle_conns : 50
+  table_prefix : tb_
+sqlite3:
+  path: DRS.db  
